@@ -22,5 +22,12 @@ Rails.application.routes.draw do
   
   get '/register', to: 'chefs#new'
   
+  #log in --> new session
+  #log out --> close session
+  #post login -> create session
+  
+  get '/login', to: "logins#new"
+  post '/login', to: "logins#create"
+  get '/logout', to: "logins#destroy"
   
 end
